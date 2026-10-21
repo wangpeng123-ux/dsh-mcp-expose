@@ -1,0 +1,18 @@
+# Dependencies (this plugin has none, but a local profile checkout might)
+node_modules/
+.pnpm-store/
+
+# npm / npx scratch space
+.npm-cache/
+npm-debug.log*
+*.tgz
+
+# Editor and OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local secrets — never commit a token
+.env
+*.local

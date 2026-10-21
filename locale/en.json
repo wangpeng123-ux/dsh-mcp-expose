@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "title": "MCP Server (Expose Harness)",
+    "description": "Publishes this Harness as an MCP endpoint so Codex, WorkBuddy, or any MCP client can delegate tasks to DSH sessions.",
+    "icon": "Expose"
+  },
+  "dshMcpExpose": {
+    "route": "MCP endpoint",
+    "auth": "Access"
+  }
+}

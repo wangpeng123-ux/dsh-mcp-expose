@@ -1,0 +1,9 @@
+- insert:
+    - id: dsh-mcp-expose
+      name: dsh-mcp-expose
+      config:
+        path: /mcp/dsh
+        token: ''
+        defaultCwd: ''
+        defaultPreset: ''
+        maxPromptWaitMs: 900000

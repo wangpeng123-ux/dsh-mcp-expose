@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "title": "MCP 服务器（暴露 Harness）",
+    "description": "把本机 DeepSeek Harness 发布为 MCP 端点，Codex、WorkBuddy 或任意 MCP 客户端都能把任务委派给 DSH 会话执行。",
+    "icon": "暴露"
+  },
+  "dshMcpExpose": {
+    "route": "MCP 端点",
+    "auth": "访问控制"
+  }
+}
