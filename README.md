@@ -52,18 +52,29 @@ Then restart the Harness (close the desktop app and reopen it, or restart `dsh w
 The plugin registers its routes on startup, so a restart is what makes them live.
 
 <details>
-<summary>Install from a local checkout instead</summary>
+<summary><b>No npm registry? Install straight from GitHub</b></summary>
+
+Installing by path works without any registry account, and is also how you work on
+the plugin itself:
 
 ```bash
 git clone https://github.com/wangpeng123-ux/dsh-mcp-expose.git
 npx @deepseek-ai/dsh plugin --profile desktop add ./dsh-mcp-expose
 ```
 
-Or, to hack on it without touching any profile:
+`dsh` resolves plugin specs through npm/pnpm, so a GitHub spec usually works too:
+
+```bash
+npx @deepseek-ai/dsh plugin --profile desktop add github:wangpeng123-ux/dsh-mcp-expose
+```
+
+Or run it without touching any profile at all:
 
 ```bash
 npx @deepseek-ai/dsh web --patch /path/to/dsh-mcp-expose/cordis.patch.yml
 ```
+
+To update a clone-based install later: `git pull` in the checkout and restart.
 </details>
 
 ### Verify

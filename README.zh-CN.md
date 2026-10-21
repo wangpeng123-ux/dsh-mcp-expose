@@ -47,18 +47,28 @@ npx @deepseek-ai/dsh plugin --profile desktop add dsh-mcp-expose
 重启才会上线。
 
 <details>
-<summary>从本地源码安装</summary>
+<summary><b>没有 npm 账号？直接从 GitHub 装</b></summary>
+
+按本地路径安装不需要任何 registry 账号，也是改插件源码时的用法：
 
 ```bash
 git clone https://github.com/wangpeng123-ux/dsh-mcp-expose.git
 npx @deepseek-ai/dsh plugin --profile desktop add ./dsh-mcp-expose
 ```
 
-或者完全不碰 profile，用 patch 方式调试：
+`dsh` 底层用 npm/pnpm 解析插件 spec，所以 GitHub spec 通常也能直接用：
+
+```bash
+npx @deepseek-ai/dsh plugin --profile desktop add github:wangpeng123-ux/dsh-mcp-expose
+```
+
+或者完全不碰 profile，用 patch 方式跑：
 
 ```bash
 npx @deepseek-ai/dsh web --patch /path/to/dsh-mcp-expose/cordis.patch.yml
 ```
+
+以后更新：在 clone 目录里 `git pull`，然后重启 Harness。
 </details>
 
 ### 验证
